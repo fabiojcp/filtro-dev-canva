@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Filtro de Devs Plugin",
+  "description": "Essa extensão irá filtrar os devs",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://canvas.kenzie.com.br/users/*/teacher_activity/course/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://canvas.kenzie.com.br/users/*/teacher_activity/course/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
